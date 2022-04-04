@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DiskMovement : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    [SerializeField] private float speed;
-=======
+
+
     [SerializeField] private float speed = 100;
     [SerializeField] private float minV = 30;
->>>>>>> Stashed changes
+
     private Rigidbody rb;
     private float high;
 
@@ -28,11 +27,7 @@ public class DiskMovement : MonoBehaviour
     }
 
     public void ApplyRandomForce(){
-<<<<<<< Updated upstream
-        if((Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y) + Mathf.Abs(rb.velocity.z)) < 8)
-=======
         if((Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y) + Mathf.Abs(rb.velocity.z)) < minV)
->>>>>>> Stashed changes
             rb.AddForce(new Vector3(Random.Range(5, 15), 0, Random.Range(5, 15)), ForceMode.Impulse);
     }
 }
