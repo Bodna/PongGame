@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
-    private Vector3 pos = new Vector3();
+    [SerializeField] private Vector2 rangeX, rangeZ;
 
-    private void Update() {
-        transform.position += new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime,0,Input.GetAxis("Horizontal") * speed * Time.deltaTime);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, 22, 27), 0 , Mathf.Clamp(transform.position.z, -29, -24));
+    
+    private async void Update() {
+        transform.localPosition += new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime,0,Input.GetAxis("Horizontal") * speed * Time.deltaTime);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, rangeX.x, rangeX.y), 0 , Mathf.Clamp(transform.position.z, rangeZ.x, rangeZ.y));
     }
 }
