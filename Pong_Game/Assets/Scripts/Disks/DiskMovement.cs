@@ -19,7 +19,7 @@ public class DiskMovement : MonoBehaviour
     }
     private void Update() {
         //Debugging velocity
-        Debug.Log(Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y) + Mathf.Abs(rb.velocity.z));
+        //Debug.Log(Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y) + Mathf.Abs(rb.velocity.z));
         //Appplying force if elocity too low
        
         ApplyRandomForce();
